@@ -1,0 +1,419 @@
+@import _variables
+@import _fonts
+@import _typed
+// --- General --- //
+*
+	margin: 0
+	padding: 0
+	border: 0
+	box-sizing: border-box
+body
+	font-family: 'brandonregular', sans-serif
+	font-size: 16px
+	position: relative
+	height: 100%
+	overflow-x: hidden
+a
+	text-decoration: none
+	color: inherit
+ul, ol 
+	list-style: none
+// --- IconFonts --- //
+.icon-fb, .icon-tw, .icon-ins, .icon-lin, .icon-marker
+	font-family: 'Flaticon'
+	font-style: normal
+	font-weight: normal
+.icon-fb:before
+	content: '\f100'
+.icon-ins:before
+	content: '\f101'
+.icon-marker:before
+	content: '\f103'
+.icon-lin:before
+	content: '\f102'
+.icon-tw:before
+	content: '\f104'
+// --- Styles --- //
+.container
+	max-width: 1170px
+	margin: 0 auto
+	padding: 0 10px
+.section
+	padding: 50px 0
+.row 
+	font-size: 0
+.col-33
+	width: 33.333333%
+	display: inline-block
+	padding: 0 10px
+.link
+	color: $green
+	text-decoration: underline
+	display: inline-block
+	font-size: 20px
+.subtitle
+	font-size: 36px
+	margin-bottom: 50px
+	position: relative
+	text-transform: uppercase
+	text-align: center
+	&.white
+		color: #fff
+		&:after
+			content: ''
+			display: block
+			width: 100px
+			height: 2px
+			background: #fff
+			position: absolute
+			bottom: -15px
+			left: 0
+			right: 0
+			margin: 0 auto
+	&.black
+		color: #000
+		&:after
+			content: ''
+			display: block
+			width: 100px
+			height: 2px
+			background: #000
+			position: absolute
+			bottom: -15px
+			left: 0
+			right: 0
+			margin: 0 auto
+#wrapper
+	position: relative
+	left: 0
+	transition: all 400ms ease
+	transform: translateZ(0)
+.menu
+	position: fixed
+	z-index: 99
+	right: -250px
+	height: 100%
+	width: 250px
+	background: $green
+	transition: all 400ms ease
+	transform: translateZ(0)
+	nav
+		margin-top: 40px
+		margin-left: 30px
+		ul 
+			li
+				margin-bottom: 10px 
+				a
+					font-size: 32px
+					color: #fff
+.sideopen
+	#wrapper
+		left: -250px
+.sideopen
+	.menu
+		right: 0
+.sideopen
+	header
+		left: -250px
+header 
+	padding: 25px 10px
+	position: fixed
+	width: 100%
+	left: 0
+	right: 0
+	top: 0
+	transition: all 400ms ease
+	transform: translateZ(0)
+	z-index: 99
+	&.scroll
+		background: $blue
+		padding: 10px 10px
+		box-shadow: 1px 1px 1px rgba(#fff,.5)
+	.inner-header
+		overflow: hidden
+.logo
+	float: left 
+	a
+		display: block
+		img
+			display: block
+.nav-button 
+	width: 32px
+	height: 24px
+	float: right
+	-webkit-transform: rotate(0deg)
+	-webkit-transform: rotate(0deg)
+	transform: rotate(0deg)
+	-webkit-transition: 0.5s ease-in-out
+	-webkit-transition: 0.5s ease-in-out
+	transition: 0.5s ease-in-out
+	cursor: pointer
+	margin-top: 7px
+	span 
+		display: block
+		position: absolute
+		height: 3px
+		width: 100%
+		background: #fff
+		border-radius: 9px
+		opacity: 1
+		-ms-filter: none
+		-webkit-filter: none
+		filter: none
+		left: 0
+		-webkit-transform: rotate(0deg)
+		-webkit-transform: rotate(0deg)
+		transform: rotate(0deg)
+		-webkit-transition: 0.25s ease-in-out
+		-webkit-transition: 0.25s ease-in-out
+		transition: 0.25s ease-in-out
+		&:nth-child(1) 
+			top: 0px
+			-webkit-transform-origin: left center
+			-webkit-transform-origin: left center
+			transform-origin: left center
+		&:nth-child(2) 
+			top: 10px
+			-webkit-transform-origin: left center
+			-webkit-transform-origin: left center
+			transform-origin: left center
+		&:nth-child(3) 
+			top: 20px
+			-webkit-transform-origin: left center
+			-webkit-transform-origin: left center
+			transform-origin: left center
+	&.open 
+		span
+			&:nth-child(1) 
+				-webkit-transform: rotate(45deg)
+				-webkit-transform: rotate(45deg)
+				transform: rotate(45deg)
+				top: -1px
+				left: 5px
+
+			&:nth-child(2) 
+				width: 0%
+				opacity: 0
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+				filter: alpha(opacity=0)
+
+			&:nth-child(3) 
+				-webkit-transform: rotate(-45deg)
+				-webkit-transform: rotate(-45deg)
+				transform: rotate(-45deg)
+				top: 22px
+				left: 5px
+.main 
+	background-image: url(../img/bg-1.jpg)
+	background-attachment: fixed
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover 
+	height: 100vh
+	display: table
+	width: 100%
+	.title-main
+		display: table-cell
+		vertical-align: middle
+		text-align: center
+		h1
+			font-family: 'Raleway', sans-serif
+			font-weight: 300
+			color: #fff
+			font-size: 48px
+			text-transform: uppercase
+		span
+			color: #fff
+			font-size: 30px
+			font-family: 'Open Sans'
+			font-weight: 700
+.skills 
+	text-align: center
+	padding: 30px 0 50px
+	.skills-item
+		img
+			display: inline-block
+		span
+			font-size: 20px
+			display: block
+.about
+	background: $blue
+	text-align: center
+.avatar
+	margin-bottom: 20px
+.about-text
+	color: #fff
+	font-size: 20px
+	width: 75%
+	margin: 0 auto 40px
+	line-height: 32px
+.record
+	text-align: center
+.number
+	color: $gris-text
+	font-size: 48px
+	display: inline-block
+	&:after
+		content: '+'
+.text-number
+	font-size: 20px
+	line-height: 24px
+	display: block
+.portfolio
+	background: $grind-bg
+.item-portfolio
+	position: relative
+	text-align: center
+	overflow: hidden
+	margin-bottom: 20px
+	transition: ease .3s ease 
+	&:after 
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background: rgba(0,0,0,.75)
+		opacity: 0
+		transition: all .3s ease
+	img
+		display: block
+		width: 100%
+		transition: all .3s ease
+	span
+		display: block
+		font-size: 36px
+		color: #fff
+		transition: all .3s ease
+		position: absolute
+		left: 0
+		top: 50%
+		margin-top: -74px
+		right: 0
+		z-index: 2
+		opacity: 0
+	a
+		font-size: 24px
+		line-height: 28px
+		display: inline-block
+		padding: 3px 10px
+		border: 2px solid #fff
+		color: #fff
+		transition: all .3s ease
+		position: absolute
+		left: 50%
+		margin-left: -40px
+		bottom: 50%
+		margin-bottom: -56px
+		right: 0
+		width: 80px
+		z-index: 2
+		opacity: 0
+	&:hover
+		&:after
+			opacity: 1
+		img
+			transform: scale(1.1)
+		span
+			margin-top: -54px
+			opacity: 1
+		a
+			margin-bottom: -36px
+			opacity: 1
+.phrase
+	background-image: url(../img/quote.png)
+	background-repeat: no-repeat
+	background-position: 0 0
+	background-size: 60px 
+	margin: 0 auto
+	width: 75%
+	padding-left: 70px
+	padding-top: 20px
+	p
+		font-size: 24px
+		line-height: 28px
+	span
+		display: block
+		text-align: right
+		color: $green
+		font-size: 20px
+footer
+	background: $blue 
+	color: #fff
+	text-align: center
+	padding: 60px 0
+	p
+		font-size: 20px
+		margin-bottom: 20px
+		&:first-child
+			font-size: 24px
+	a 
+		display: inline-block
+		margin-bottom: 30px
+		font-size: 20px
+		&:hover
+			text-decoration: underline
+	ul
+		font-size: 0
+		li
+			display: inline-block
+			margin: 0 20px
+			a
+				display: block
+				font-size: 24px
+				margin-bottom: 0
+				&:hover
+					text-decoration: none
+.copy
+	background: #23313e
+	color: #fff
+	text-align: center
+	padding: 20px 0
+// --- Media Queries --- //
+@media screen and (max-width: 768px)
+	.portfolio
+		.row
+			.col-33
+				width: 50%
+	.about-text
+		width: 100%
+	.phrase
+		width: 90%
+@media screen and (max-width: 480px)
+	.subtitle
+		font-size: 30px
+	.section
+		padding: 30px 0
+	.main 
+		.title-main 
+			h1
+				font-size: 36px
+	.skills
+		padding: 20px 0 30px
+		.row
+			.col-33
+				margin-bottom: 20px
+	.portfolio
+		.row
+			.col-33
+				width: 100%
+	.record
+		.row
+			.col-33
+				margin-bottom: 20px
+	.col-33
+		width: 100%
+	footer
+		padding: 30px 0
+
+
+
+
+
+
+
+
+
+
